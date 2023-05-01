@@ -1,20 +1,13 @@
-/*eslint-disable*/
-
 import React from "react";
-import * as THREE from "three";
-import "./styles.css";
 import { useState, useMemo, Suspense } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
+import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import CameraControls from "camera-controls";
 import { Modal } from "antd";
-import a from "./img/1.jpg";
-import b from "./img/2.jpg";
-import c from "./img/3.jpg";
-import d from "./img/4.jpg";
-import e from "./img/5.jpg";
-import f from "./img/6.jpg";
+import Description from "./Description"
+import "./styles.css";
 
 CameraControls.install({ THREE });
 document.body.style = "background: #0C0C0C;";
@@ -74,10 +67,10 @@ function Controls({
   const gl = useThree((state) => state.gl);
   const controls = useMemo(() => new CameraControls(camera, gl.domElement), []);
   return useFrame((state, delta) => {
-    if (focus.z == 1) {
+    if (focus.z === 1) {
       zoom ? pos.set(0, 0, 52) : pos.set(focus.x, focus.y, focus.z + 9);
       zoom ? look.set(0, 0, 0) : look.set(focus.x, focus.y, focus.z);
-    } else if (focus.x == 14.9) {
+    } else if (focus.x === 14.9) {
       zoom ? pos.set(0, 0, 52) : pos.set(focus.x - 9, focus.y, focus.z);
       zoom ? look.set(0, 0, 0) : look.set(focus.x, focus.y, focus.z);
     } else {
@@ -108,7 +101,7 @@ export default function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [obj, setObj] = useState();
   const modalShow = () =>
-    setIsModalVisible(zoom == true ? !isModalVisible : isModalVisible);
+    setIsModalVisible(zoom === true ? !isModalVisible : isModalVisible);
 
   var data = [
     { position: [7.1, 6.4, 1], args: [7.5, 5, 0.01], rotation: [0, 0, 0] },
@@ -155,7 +148,7 @@ export default function App() {
               setObj(0);
               setTimeout(() => {
                 setIsModalVisible(false);
-                setZoom(zoom == true ? zoom : !zoom);
+                setZoom(zoom === true ? zoom : !zoom);
               }, 0.01);
             }}
           >
@@ -165,142 +158,4 @@ export default function App() {
       </Canvas>
     </div>
   );
-}
-
-function Description({ obj }) {
-  if (obj == 14) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={a} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent Van Gogh [1853-1890]</h1>
-            <h2>Poppy field</h2>
-            <p>
-              1890
-              <br />
-              H.73, W.91.5cm <br />
-              Oil on Canvas
-              <br />
-              The Hague Museum of Contemporary Art
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else if (obj == 15) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={b} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent Van Gogh [1853-1890]</h1>
-            <h2>The Stary Night</h2>
-            <p>
-              1890
-              <br />
-              H.73, W.91.5cm <br />
-              Oil on Canvas
-              <br />
-              The Hague Museum of Contemporary Art
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else if (obj == 16) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={c} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent Van Gogh [1853-1890]</h1>
-            <h2>Vase with Poppies</h2>
-            <p>
-              1886
-              <br />
-              H.54.6, W.45.1cm <br />
-              Oil on Canvas
-              <br />
-              Wadsworth Atheneum Museum of Art
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else if (obj == 17) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={d} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent Van Gogh [1853-1890]</h1>
-            <h2>Self Portrait</h2>
-            <p>
-              1889
-              <br />
-              H.57.79, W.44.5cm <br />
-              Oil on Canvas
-              <br />
-              National Gallery of Art
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else if (obj == 18) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={e} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent van Gogh [1853-1890]</h1>
-            <h2>Eugène Boch</h2>
-            <p>
-              1888
-              <br />
-              H.60.3, W.45.4cm <br />
-              Oil on Canvas
-              <br />
-              Musée d'Orsay
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else if (obj == 19) {
-    return (
-      <div className="container">
-        <div className="img-container">
-          <img className="img" src={f} />
-        </div>
-        <div className="descrip-container">
-          <div className="descrip">
-            <h1>Vincent Van Gogh [1853-1890]</h1>
-            <h2>La Chambre de Van Gogh à Arles</h2>
-            <p>
-              1889
-              <br />
-              H.57.3, W.73.5cm <br />
-              Oil on Canvas
-              <br />
-              Musée d'Orsay
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    return null;
-  }
 }

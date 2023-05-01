@@ -1,0 +1,34 @@
+.container{
+    display: grid;
+      grid-template-columns: 550px 400px;
+  }
+    
+  .img-container{
+    width : 550px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .img{
+    width: 500px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  
+  .descrip-container{
+    width : 400px;
+    height: 700px;
+    color: #eee;
+    padding-left: 15px;
+  
+  }
+  
+  .descrip{
+    width : 400px;
+    height: 600px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
