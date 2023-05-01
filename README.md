@@ -1,11 +1,12 @@
 # Gogh_Room_3D  
 
 ## Overview
-This is a simple web project that utilizes WebGL based on React. The project features a 3D model of "Van Gogh's Room"  
-and offers a virtual environment on the web where visitors can enjoy Van Gogh's paintings hung on the walls of the 3D model.
+This is a simple web project that utilizes WebGL based on React.  
+The project features a 3D model of "Van Gogh's Room" and offers a virtual environment on the web  
+where visitors can enjoy Van Gogh's paintings hung on the walls of the 3D model.
 
-React를 기반으로 WebGL을 활용한 간단한 웹 프로젝트입니다. 이 프로젝트는 "고흐의 방"이라는 3D 모델을 활용하였으며,  
-3D 모델 안의 벽에 걸려있는 반 고흐의 그림들을 웹 상의 가상 공간에서 감상할 수 있습니다.  
+React를 기반으로 WebGL을 활용한 간단한 웹 프로젝트입니다.  
+이 프로젝트는 "고흐의 방"이라는 3D 모델을 활용하였으며, 3D 모델 안의 벽에 걸려있는 반 고흐의 그림들을 웹 상의 가상 공간에서 감상할 수 있습니다.  
 <br/>
 
 ## Preview
