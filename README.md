@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Gogh_Room_3D  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a simple web project that utilizes WebGL based on React. The project features a 3D model of "Van Gogh's Room"  
+and offers a virtual environment on the web where visitors can enjoy Van Gogh's paintings hung on the walls of the 3D model.
 
-## Available Scripts
+React를 기반으로 WebGL을 활용한 간단한 웹 프로젝트입니다. 이 프로젝트는 "고흐의 방"이라는 3D 모델을 활용하였으며,  
+3D 모델 안의 벽에 걸려있는 반 고흐의 그림들을 웹 상의 가상 공간에서 감상할 수 있습니다.  
+<br/>
 
-In the project directory, you can run:
+## Preview
+![preview](./public/preview.gif)  
+<br/>
 
-### `npm start`
+## How To  
+이 프로젝트를 실행하려면 `Node.js`가 설치되어 있어야 합니다.  
+`Node.js`를 설치하는 방법은 [공식 사이트](https://nodejs.org/en)에서 제공하는 가이드를 참고하세요.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Setup  
+다음 명령어를 실행하여 프로젝트를 클론하고 필요한 패키지들을 설치합니다.
+```console
+$ git clone https://github.com/rheefine/Gogh_Room_3D.git
+$ cd Gogh_Room_3D
+$ npm install
+```
+ 
+### Run
+다음 명령어를 실행하면 로컬 서버가 실행됩니다.  
+```console
+$ npm start  
+```  
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+브라우저에서 http://localhost:3000으로 접속하여 프로젝트를 확인할 수 있습니다.  
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## References
 
-### `npm run build`
+* [Loading 3D Models](https://docs.pmnd.rs/react-three-fiber/tutorials/loading-models)  
+* [react-three-fiber example1](https://codesandbox.io/s/8pbw1f?file=/src/App.js)  
+* [react-three-fiber example2](https://codesandbox.io/s/three-fiber-zoom-to-object-camera-controls-solution-final-sbgx0?file=/src/App.js)  
+<br/>
+ 
+***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [@react-three/drei](https://github.com/pmndrs/drei/blob/master/LICENSE) `^9.43.3` - MIT License
+- [@react-three/fiber](https://github.com/pmndrs/react-three-fiber/blob/master/LICENSE) `^8.9.1` - MIT License
+- [antd](https://github.com/ant-design/ant-design/blob/master/LICENSE) `^5.0.2` - MIT License
+- [camera-controls](https://github.com/yomotsu/camera-controls/blob/main/LICENSE) `^1.30.0` - MIT License
+- [react](https://github.com/facebook/react/blob/main/LICENSE) `^18.2.0` - MIT License
+- [react-dom](https://github.com/facebook/react/blob/main/LICENSE) `^18.2.0` - MIT License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All documents and source code files in this repo are licensed under the [MIT License](http://opensource.org/licenses/MIT):  
+Copyright (c) 2022-2023 [Rhee DongHyun](https://github.com/rheefine)
